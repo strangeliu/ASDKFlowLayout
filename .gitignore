@@ -1,0 +1,12 @@
+UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
+Carthage/
+.DS_Store
+*.generated.swift
+R.generated.swift
+xcschememanagement.plist
+Pods
+DerivedData
+build
+*.swp
+*.lock
