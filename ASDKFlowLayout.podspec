@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '8.0'
 
   spec.public_header_files  = 'Source/*.h'
-  spec.source_files = 'Source/*.{h,m}'
+  spec.source_files = 'Source/*.{h,m,swift}'
   spec.dependency 'Texture/Core', '~> 2.6'
 
 end
