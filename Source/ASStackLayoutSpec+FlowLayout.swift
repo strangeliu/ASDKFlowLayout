@@ -26,3 +26,36 @@ extension ASStackLayoutSpec {
         return self
     }
 }
+
+extension ASStackLayoutSpec {
+    
+    @discardableResult
+    public func addItem<Element: ASLayoutElement>(_ item: Element) -> Element {
+        if var children = children {
+            children.append(item)
+            self.children = children
+        } else {
+            children = [item]
+        }
+        return item
+    }
+    
+    @discardableResult
+    public func addItems(_ items: [ASLayoutElement]) -> Self {
+        if var children = children {
+            children += items
+            self.children = children
+        } else {
+            children = items
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func addStack(_ direction: ASStackLayoutDirection) -> ASStackLayoutSpec {
+        let stack = ASStackLayoutSpec()
+        stack.direction = direction
+        addItem(stack)
+        return stack
+    }
+}

@@ -11,7 +11,8 @@ import AsyncDisplayKit
 
 extension ASLayoutSpec {
     
-    public func children(_ children: [ASLayoutElement]) -> ASLayoutSpec {
+    @discardableResult
+    public func children(_ children: [ASLayoutElement]) -> Self {
         self.children = children
         return self
     }
@@ -58,112 +59,112 @@ extension ASLayoutSpec {
 extension ASLayoutSpec {
     // MARK: - Sizing
     
-    public func width(_ width: ASDimension) -> ASLayoutSpec {
+    public func width(_ width: ASDimension) -> Self {
         style.width = width
         return self
     }
     
-    public func height(_ height: ASDimension) -> ASLayoutSpec {
+    public func height(_ height: ASDimension) -> Self {
         style.height = height
         return self
     }
     
-    public func minWidth(_ minWidth: ASDimension) -> ASLayoutSpec {
+    public func minWidth(_ minWidth: ASDimension) -> Self {
         style.minWidth = minWidth
         return self
     }
     
-    public func maxWidth(_ maxWidth: ASDimension) -> ASLayoutSpec {
+    public func maxWidth(_ maxWidth: ASDimension) -> Self {
         style.maxWidth = maxWidth
         return self
     }
     
-    public func minHeight(_ minHeight: ASDimension) -> ASLayoutSpec {
+    public func minHeight(_ minHeight: ASDimension) -> Self {
         style.minHeight = minHeight
         return self
     }
     
-    public func maxHeight(_ maxHeight: ASDimension) -> ASLayoutSpec {
+    public func maxHeight(_ maxHeight: ASDimension) -> Self {
         style.maxHeight = maxHeight
         return self
     }
     
     // MARK: - Size Helpers
-    public func preferredSize(_ preferredSize: CGSize) -> ASLayoutSpec {
+    public func preferredSize(_ preferredSize: CGSize) -> Self {
         style.preferredSize = preferredSize
         return self
     }
     
-    public func minSize(_ minSize: CGSize) -> ASLayoutSpec {
+    public func minSize(_ minSize: CGSize) -> Self {
         style.minSize = minSize
         return self
     }
     
-    public func maxSize(_ maxSize: CGSize) -> ASLayoutSpec {
+    public func maxSize(_ maxSize: CGSize) -> Self {
         style.maxSize = maxSize
         return self
     }
     
-    public func preferredLayoutSize(_ preferredLayoutSize: ASLayoutSize) -> ASLayoutSpec {
+    public func preferredLayoutSize(_ preferredLayoutSize: ASLayoutSize) -> Self {
         style.preferredLayoutSize = preferredLayoutSize
         return self
     }
     
-    public func minLayoutSize(_ minLayoutSize: ASLayoutSize) -> ASLayoutSpec {
+    public func minLayoutSize(_ minLayoutSize: ASLayoutSize) -> Self {
         style.minLayoutSize = minLayoutSize
         return self
     }
     
-    public func maxLayoutSize(_ maxLayoutSize: ASLayoutSize) -> ASLayoutSpec {
+    public func maxLayoutSize(_ maxLayoutSize: ASLayoutSize) -> Self {
         style.maxLayoutSize = maxLayoutSize
         return self
     }
     
     // MARK: - ASStackLayoutElement
-    public func spacingBefore(_ spacingBefore: CGFloat) -> ASLayoutSpec {
+    public func spacingBefore(_ spacingBefore: CGFloat) -> Self {
         style.spacingBefore = spacingBefore
         return self
     }
     
-    public func spacingAfter(_ spacingAfter: CGFloat) -> ASLayoutSpec {
+    public func spacingAfter(_ spacingAfter: CGFloat) -> Self {
         style.spacingAfter = spacingAfter
         return self
     }
     
-    public func flexGrow(_ flexGrow: CGFloat) -> ASLayoutSpec {
+    public func flexGrow(_ flexGrow: CGFloat) -> Self {
         style.flexGrow = flexGrow
         return self
     }
     
-    public func flexShrink(_ flexShrink: CGFloat) -> ASLayoutSpec {
+    public func flexShrink(_ flexShrink: CGFloat) -> Self {
         style.flexShrink = flexShrink
         return self
     }
     
-    public func flexBasis(_ flexBasis: ASDimension) -> ASLayoutSpec {
+    public func flexBasis(_ flexBasis: ASDimension) -> Self {
         style.flexBasis = flexBasis
         return self
     }
     
-    public func alignSelf(_ alignSelf: ASStackLayoutAlignSelf) -> ASLayoutSpec {
+    public func alignSelf(_ alignSelf: ASStackLayoutAlignSelf) -> Self {
         style.alignSelf = alignSelf
         return self
     }
     
     // Experimental
     
-    public func ascender(_ ascender: CGFloat) -> ASLayoutSpec {
+    public func ascender(_ ascender: CGFloat) -> Self {
         style.ascender = ascender
         return self
     }
     
-    public func descender(_ descender: CGFloat) -> ASLayoutSpec {
+    public func descender(_ descender: CGFloat) -> Self {
         style.descender = descender
         return self
     }
     
     // MARK: - ASAbsoluteLayoutElement
-    public func layoutPosition(_ layoutPosition: CGPoint) -> ASLayoutSpec {
+    public func layoutPosition(_ layoutPosition: CGPoint) -> Self {
         style.layoutPosition = layoutPosition
         return self
     }

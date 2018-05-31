@@ -35,16 +35,13 @@ extension ASLayoutSpec {
     public var flow: Flow<ASLayoutSpec> {
         return Flow(base: self)
     }
-    
-    public func define(_ define: (ASLayoutSpec) -> Void) -> Self {
-        define(self)
-        return self
-    }
 }
 
-extension ASStackLayoutSpec {
+extension ASLayoutElement {
     
-    public func addItem(_ item: ASStackLayoutSpec) -> ASStackLayoutSpec {
-        return ASStackLayoutSpec()
+    @discardableResult
+    public func define(_ define: (Self) -> Void) -> Self {
+        define(self)
+        return self
     }
 }
