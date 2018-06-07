@@ -25,7 +25,7 @@ extension ASLayoutSpec {
     }
 }
 
-extension ASLayoutSpec {
+extension ASLayoutElement {
     
     public func wrap() -> ASWrapperLayoutSpec {
         return ASWrapperLayoutSpec.wrapper(with: self)

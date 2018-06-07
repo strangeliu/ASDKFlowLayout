@@ -10,37 +10,6 @@ import Foundation
 import AsyncDisplayKit
 
 extension ASDisplayNode {
-    
-    public func wrap() -> ASWrapperLayoutSpec {
-        return ASWrapperLayoutSpec.wrapper(with: self)
-    }
-    
-    public func inset(_ insets: UIEdgeInsets) -> ASInsetLayoutSpec {
-        return ASInsetLayoutSpec(insets: insets, child: self)
-    }
-    
-    public func overlay(_ overlay: ASLayoutElement) -> ASOverlayLayoutSpec {
-        return ASOverlayLayoutSpec(child: self, overlay: overlay)
-    }
-    
-    public func background(_ background: ASLayoutElement) -> ASBackgroundLayoutSpec {
-        return ASBackgroundLayoutSpec(child: self, background: background)
-    }
-    
-    public func center(with centeringOptions: ASCenterLayoutSpecCenteringOptions = .XY, sizingOptions: ASCenterLayoutSpecSizingOptions = []) -> ASCenterLayoutSpec {
-        return ASCenterLayoutSpec(centeringOptions: centeringOptions, sizingOptions: sizingOptions, child: self)
-    }
-    
-    public func ratio(_ ratio: CGFloat) -> ASRatioLayoutSpec {
-        return ASRatioLayoutSpec(ratio: ratio, child: self)
-    }
-    
-    public func relativePosition(horizontal: ASRelativeLayoutSpecPosition = .none, vertical: ASRelativeLayoutSpecPosition = .none, sizing: ASRelativeLayoutSpecSizingOption = []) -> ASRelativeLayoutSpec {
-        return ASRelativeLayoutSpec.relativePositionLayoutSpec(withHorizontalPosition: horizontal, verticalPosition: vertical, sizingOption: sizing, child: self)
-    }
-}
-
-extension ASDisplayNode {
     // MARK: - Sizing
     
     @discardableResult
