@@ -31,8 +31,12 @@ extension ASLayoutElement {
         return ASWrapperLayoutSpec.wrapper(with: self)
     }
     
-    public func inset(_ insets: UIEdgeInsets) -> ASInsetLayoutSpec {
+    public func insets(_ insets: UIEdgeInsets) -> ASInsetLayoutSpec {
         return ASInsetLayoutSpec(insets: insets, child: self)
+    }
+    
+    public func insets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> ASInsetLayoutSpec {
+        return insets(UIEdgeInsets(top: top, left: left, bottom: bottom, right: right))
     }
     
     public func overlay(_ overlay: ASLayoutElement) -> ASOverlayLayoutSpec {
