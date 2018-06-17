@@ -20,8 +20,14 @@ extension ASLayoutSpec {
 
 extension ASLayoutSpec {
     
-    public class func spacer() -> ASLayoutSpec {
+    public class func flexibleSpace() -> ASLayoutSpec {
         return ASLayoutSpec().flexGrow(1)
+    }
+    
+    public class func fixedSpace(_ space: CGFloat) -> ASLayoutSpec {
+        return ASLayoutSpec().define({ layout in
+            layout.style.preferredSize = CGSize(width: space, height: space)
+        })
     }
 }
 
