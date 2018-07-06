@@ -25,6 +25,16 @@ extension ASStackLayoutSpec {
         self.alignItems = alignItems
         return self
     }
+    
+    public func flexWrap(_ wrap: Bool) -> ASStackLayoutSpec {
+        self.flexWrap = wrap ? .wrap : .noWrap
+        return self
+    }
+    
+    public func lineSpacing(_ lineSpacing: CGFloat) -> ASStackLayoutSpec {
+        self.lineSpacing = lineSpacing
+        return self
+    }
 }
 
 extension ASStackLayoutSpec {
