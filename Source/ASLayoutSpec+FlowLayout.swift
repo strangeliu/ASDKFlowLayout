@@ -200,3 +200,10 @@ extension ASLayoutSpec {
     }
 }
 
+extension Array where Element: ASLayoutElement {
+    
+    public func wrap() -> ASWrapperLayoutSpec {
+        return ASWrapperLayoutSpec.wrapper(with: self)
+    }
+}
+
