@@ -68,4 +68,16 @@ extension ASStackLayoutSpec {
         addItem(stack)
         return stack
     }
+    
+    @discardableResult
+    public func addFlexibleSpace() -> Self {
+        addItem(ASLayoutSpec.flexibleSpace())
+        return self
+    }
+    
+    @discardableResult
+    public func addFixedSpace(_ space: CGFloat) -> Self {
+        addItem(ASLayoutSpec.fixedSpace(space))
+        return self
+    }
 }
