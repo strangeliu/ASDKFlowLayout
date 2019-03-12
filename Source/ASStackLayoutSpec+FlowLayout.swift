@@ -51,12 +51,26 @@ extension ASStackLayoutSpec {
     }
     
     @discardableResult
+    public func addItem(_ creator: () -> ASLayoutElement) -> Self {
+        addItem(creator())
+        return self
+    }
+    
+    @discardableResult
     public func addItems(_ items: [ASLayoutElement]) -> Self {
         if var children = children {
             children += items
             self.children = children
         } else {
             children = items
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func invert() -> Self {
+        if let children = children {
+            self.children = children.reversed()
         }
         return self
     }
