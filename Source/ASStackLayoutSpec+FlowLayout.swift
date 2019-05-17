@@ -94,10 +94,4 @@ extension ASStackLayoutSpec {
         addItem(ASLayoutSpec.fixedSpace(space))
         return self
     }
-    
-    @discardableResult
-    public func invert() -> Self {
-        children = children?.reversed()
-        return self
-    }
 }
