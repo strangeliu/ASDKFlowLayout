@@ -207,3 +207,13 @@ extension Array where Element: ASLayoutElement {
     }
 }
 
+extension ASDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: UInt) {
+        self = ASDimension(unit: .points, value: CGFloat(value))
+    }
+    
+    public init(floatLiteral value: Double) {
+        self = ASDimension(unit: .points, value: CGFloat(value))
+    }
+}
