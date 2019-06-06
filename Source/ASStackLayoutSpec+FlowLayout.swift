@@ -76,10 +76,10 @@ extension ASStackLayoutSpec {
     }
     
     @discardableResult
-    public func addStack(_ direction: ASStackLayoutDirection) -> ASStackLayoutSpec {
+    public func addStack(_ direction: ASStackLayoutDirection, transform: ((ASStackLayoutSpec) -> ASLayoutElement)? = nil) -> ASStackLayoutSpec {
         let stack = ASStackLayoutSpec()
         stack.direction = direction
-        addItem(stack)
+        addItem(transform?(stack) ?? stack)
         return stack
     }
     
