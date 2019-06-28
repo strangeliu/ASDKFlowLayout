@@ -51,9 +51,10 @@ extension ASStackLayoutSpec {
     }
     
     @discardableResult
-    public func addItem(_ creator: () -> ASLayoutElement) -> Self {
-        addItem(creator())
-        return self
+    public func addItem(_ creator: () -> ASLayoutElement) -> ASLayoutElement {
+        let item = creator()
+        addItem(item)
+        return item
     }
     
     @discardableResult
@@ -84,14 +85,16 @@ extension ASStackLayoutSpec {
     }
     
     @discardableResult
-    public func addFlexibleSpace() -> Self {
-        addItem(ASLayoutSpec.flexibleSpace())
-        return self
+    public func addFlexibleSpace(_ flexGrow: CGFloat = 1) -> ASLayoutElement {
+        let space = ASLayoutSpec.flexibleSpace(flexGrow)
+        addItem(space)
+        return space
     }
     
     @discardableResult
-    public func addFixedSpace(_ space: CGFloat) -> Self {
-        addItem(ASLayoutSpec.fixedSpace(space))
-        return self
+    public func addFixedSpace(_ space: CGFloat) -> ASLayoutElement {
+        let space = ASLayoutSpec.fixedSpace(space)
+        addItem(space)
+        return space
     }
 }

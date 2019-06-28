@@ -20,8 +20,8 @@ extension ASLayoutSpec {
 
 extension ASLayoutSpec {
     
-    public class func flexibleSpace() -> ASLayoutSpec {
-        return ASLayoutSpec().flexGrow(1)
+    public class func flexibleSpace(_ flexGrow: CGFloat = 1) -> ASLayoutSpec {
+        return ASLayoutSpec().flexGrow(flexGrow)
     }
     
     public class func fixedSpace(_ space: CGFloat) -> ASLayoutSpec {
@@ -66,7 +66,7 @@ extension ASLayoutElement {
     }
 }
 
-extension ASLayoutSpec {
+extension ASLayoutElement {
     // MARK: - Sizing
     
     @discardableResult
