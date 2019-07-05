@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		2B564677209A940700C40A4A /* ASLayoutSpec+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B564676209A940700C40A4A /* ASLayoutSpec+FlowLayout.swift */; };
 		2B564681209A947700C40A4A /* ASStackLayoutSpec+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B564680209A947700C40A4A /* ASStackLayoutSpec+FlowLayout.swift */; };
 		2B564683209A948C00C40A4A /* ASAbsoluteLayoutSpec+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B564682209A948C00C40A4A /* ASAbsoluteLayoutSpec+FlowLayout.swift */; };
-		2B564686209A960E00C40A4A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B564685209A960E00C40A4A /* Info.plist */; };
 		2B564688209A9C3A00C40A4A /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B564687209A9C3A00C40A4A /* Flow.swift */; };
 		2B581B9F20A4480E00E8286C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B581B9E20A4480E00E8286C /* AppDelegate.swift */; };
 		2B581BA120A4480E00E8286C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B581BA020A4480E00E8286C /* ViewController.swift */; };
@@ -287,10 +286,11 @@
 				TargetAttributes = {
 					2B564659209A93C900C40A4A = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1020;
 					};
 					2B564662209A93C900C40A4A = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1020;
 					};
 					2B581B9B20A4480E00E8286C = {
 						CreatedOnToolsVersion = 9.3;
@@ -322,7 +322,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B564686209A960E00C40A4A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,17 +350,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		972DBE67FA93064AE015852D /* [CP] Check Pods Manifest.lock */ = {
@@ -610,7 +608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -636,7 +634,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.ASDKFlowLayout;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -654,7 +652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.ASDKFlowLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -672,7 +670,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.ASDKFlowLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -691,7 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -710,7 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
