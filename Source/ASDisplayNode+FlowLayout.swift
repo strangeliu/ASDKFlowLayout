@@ -49,11 +49,6 @@ extension ASDisplayNode {
     }
     
     // MARK: - Size Helpers
-    @discardableResult
-    public func preferredSize(_ preferredSize: CGSize) -> Self {
-        style.preferredSize = preferredSize
-        return self
-    }
     
     @discardableResult
     public func minSize(_ minSize: CGSize) -> Self {
@@ -113,12 +108,6 @@ extension ASDisplayNode {
     @discardableResult
     public func flexBasis(_ flexBasis: ASDimension) -> Self {
         style.flexBasis = flexBasis
-        return self
-    }
-    
-    @discardableResult
-    public func alignSelf(_ alignSelf: ASStackLayoutAlignSelf) -> Self {
-        style.alignSelf = alignSelf
         return self
     }
     

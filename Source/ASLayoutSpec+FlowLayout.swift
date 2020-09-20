@@ -21,7 +21,7 @@ extension ASLayoutSpec {
 extension ASLayoutSpec {
     
     public class func flexibleSpace(_ flexGrow: CGFloat = 1) -> ASLayoutSpec {
-        return ASLayoutSpec().flexGrow(flexGrow)
+        return ASLayoutSpec().af_flexGrow(flexGrow)
     }
     
     public class func fixedSpace(_ space: CGFloat) -> ASLayoutSpec {
@@ -57,7 +57,7 @@ extension ASLayoutElement {
         return ASCenterLayoutSpec(centeringOptions: centeringOptions, sizingOptions: sizingOptions, child: self)
     }
     
-    public func ratio(_ ratio: CGFloat) -> ASRatioLayoutSpec {
+    @discardableResult public func ratio(_ ratio: CGFloat) -> ASRatioLayoutSpec {
         return ASRatioLayoutSpec(ratio: ratio, child: self)
     }
     
@@ -76,7 +76,7 @@ extension ASLayoutElement {
     }
     
     @discardableResult
-    public func height(_ height: ASDimension) -> Self {
+    public func styleHeight(_ height: ASDimension) -> Self {
         style.height = height
         return self
     }
@@ -107,7 +107,7 @@ extension ASLayoutElement {
     
     // MARK: - Size Helpers
     @discardableResult
-    public func preferredSize(_ preferredSize: CGSize) -> Self {
+    public func af_preferredSize(_ preferredSize: CGSize) -> Self {
         style.preferredSize = preferredSize
         return self
     }
@@ -144,7 +144,7 @@ extension ASLayoutElement {
     
     // MARK: - ASStackLayoutElement
     @discardableResult
-    public func spacingBefore(_ spacingBefore: CGFloat) -> Self {
+    public func af_spacingBefore(_ spacingBefore: CGFloat) -> Self {
         style.spacingBefore = spacingBefore
         return self
     }
@@ -156,13 +156,13 @@ extension ASLayoutElement {
     }
     
     @discardableResult
-    public func flexGrow(_ flexGrow: CGFloat) -> Self {
+    public func af_flexGrow(_ flexGrow: CGFloat) -> Self {
         style.flexGrow = flexGrow
         return self
     }
     
     @discardableResult
-    public func flexShrink(_ flexShrink: CGFloat) -> Self {
+    public func af_flexShrink(_ flexShrink: CGFloat) -> Self {
         style.flexShrink = flexShrink
         return self
     }
@@ -174,7 +174,7 @@ extension ASLayoutElement {
     }
     
     @discardableResult
-    public func alignSelf(_ alignSelf: ASStackLayoutAlignSelf) -> Self {
+    public func af_alignSelf(_ alignSelf: ASStackLayoutAlignSelf) -> Self {
         style.alignSelf = alignSelf
         return self
     }
