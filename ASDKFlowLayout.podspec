@@ -7,7 +7,8 @@ Pod::Spec.new do |spec|
   spec.summary      = 'Layout extensions for ASDK'
   spec.source       = { :git => 'https://github.com/strangleiu/ASDKFlowLayout.git', :tag => spec.version.to_s }
 
-  spec.ios.deployment_target = '8.0'
+  spec.ios.deployment_target = '11.0'
+  spec.tvos.deployment_target = '11.0'
 
   spec.public_header_files  = 'Source/*.h'
   spec.source_files = 'Source/*.{swift}'

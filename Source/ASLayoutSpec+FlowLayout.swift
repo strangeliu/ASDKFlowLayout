@@ -150,7 +150,7 @@ extension ASLayoutElement {
     }
     
     @discardableResult
-    public func spacingAfter(_ spacingAfter: CGFloat) -> Self {
+    public func af_spacingAfter(_ spacingAfter: CGFloat) -> Self {
         style.spacingAfter = spacingAfter
         return self
     }
